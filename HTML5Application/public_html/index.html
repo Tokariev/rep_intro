@@ -10,18 +10,24 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/intro.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.7.0/introjs.min.css">
     </head>
     <body>
-        <div> 
-            <p class="introduction-farm" id="intro-farm" data-step="1" data-intro="Hello!"> test </p>
-            <p class="introduction-farm" id="intro-farm" data-step="2" data-intro="Fancy!"> abc </p>
+        <div id="First_Container"> 
+            <p class="introduction-farm" id="intro-farm" data-step="1" data-intro="Hello!"> Willkommen Nutzer! </p>
+            <div class="introduction-farm" id="intro-farm" data-step="2" data-intro="Fancy!" data-position="right">
+                <p>Hier siehst du Experimente mit Menschen!</p>
+                <p>Ehmm - mit Intro.js </p>
+            </div>
         </div>
-        
         <script>
 		
 		
             introJs().start();
+            introJs().onexit(function() {
+                alert("exit of introduction");
+            });
 		
 		
         </script>
